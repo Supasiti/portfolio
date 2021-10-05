@@ -3,10 +3,11 @@ import { PropTypes } from 'prop-types'
 // Style
 const bgColorStyle = (color) => {
   const list = {
-    dark: 'bg-teal',
     brand: 'bg-gradient-to-br from-java to-teal',
-    gold: 'bg-gradient-to-br from-gold to-sandy',
-    burnt: 'bg-gradient-to-br from-sandy to-burnt',
+    gold: `bg-gradient-to-br from-gold to-sandy text-teal 
+      hover:-translate-y-0.5 transform transition
+      focus:ring focus:ring-sandy focus:ring-offset-1 focus:outline-none`,
+
     white: 'bg-gradient-to-br from-gray-300 to-gray-400',
   }
   if (color in list) return list[color]
@@ -21,7 +22,7 @@ const style = ({
   extend = '',
   isCircular = false,
 }) => {
-  const base = ` w-full h-full`
+  const base = `inline-block px-3 py-2`
   return `
     ${base} 
     ${roundStyle(isCircular)}
@@ -30,11 +31,20 @@ const style = ({
     ${extend}`
 }
 
-//  render Card
-const Card = (props) => <div className={style(props)}>{props.children}</div>
+// render
+const Button = (props) => (
+  <button
+    className={style(props)}
+    type={props.isSubmit ? 'submit' : 'button'}
+    onClick={props.onClick}
+  >
+    {props.children}
+  </button>
+)
 
-Card.propTypes = {
+Button.propTypes = {
+  isSubmit: PropTypes.bool,
+  onClick: PropTypes.func,
   children: PropTypes.node,
 }
-
-export default Card
+export default Button
