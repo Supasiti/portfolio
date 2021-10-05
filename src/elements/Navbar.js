@@ -1,18 +1,37 @@
+import { PropTypes } from 'prop-types'
 import NavItem from './NavItem'
 
 const menuContainer = `
-  flex flex-row flex-grow justify-center md:justify-end space-x-6
+  flex flex-row flex-grow justify-center md:justify-end
 `
-const Navbar = () => (
-  <div className="flex flex-row justify-between py-5">
-    <h3 className="hidden md:inline-block">Tharatorn Supasiti</h3>
-    <div className={menuContainer}>
-      <NavItem text="about" />
-      <NavItem text="portfolio" />
-      <NavItem text="contact" />
-      <NavItem text="resume" />
-    </div>
-  </div>
-)
 
+const pages = ['about', 'portfolio', 'contact', 'resume']
+
+// render
+const Navbar = ({ setCurrentPage }) => {
+  const handleClick = (e, page) => {
+    e.preventDefault()
+    if (setCurrentPage) {
+      setCurrentPage(page)
+    }
+  }
+  return (
+    <div className="flex flex-row justify-between py-5">
+      <h3 className="hidden md:inline-block">Tharatorn Supasiti</h3>
+      <div className={menuContainer}>
+        {pages.map((page) => (
+          <NavItem
+            text={page}
+            onClick={(e) => handleClick(e, page)}
+            key={page}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+Navbar.propTypes = {
+  setCurrentPage: PropTypes.func,
+}
 export default Navbar

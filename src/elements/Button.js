@@ -3,8 +3,10 @@ import { PropTypes } from 'prop-types'
 // Style
 const bgColorStyle = (color) => {
   const list = {
-    brand: 'bg-gradient-to-br from-java to-teal',
-    gold: `bg-gradient-to-br from-gold to-sandy text-teal 
+    java: `bg-java`,
+    teal: `bg-teal hover:bg-java`,
+    gold: `
+      bg-gradient-to-br from-gold to-sandy text-teal 
       hover:-translate-y-0.5 transform transition
       focus:ring focus:ring-sandy focus:ring-offset-1 focus:outline-none`,
 
@@ -13,21 +15,18 @@ const bgColorStyle = (color) => {
   if (color in list) return list[color]
   return ''
 }
-const roundStyle = (isCircular) => (isCircular ? 'rounded-full' : 'rounded-2xl')
 const shadowStyle = (hasShadow) => (hasShadow ? 'shadow-xl' : '')
 
 const style = ({
   color = '',
   shadow = true,
   extend = '',
-  isCircular = false,
-  padding = 'px-3 py-2',
+  padding = 'px-2 py-2',
 }) => {
-  const base = `inline-block`
+  const base = `inline-block rounded-full`
   return `
     ${base} 
     ${padding}
-    ${roundStyle(isCircular)}
     ${bgColorStyle(color)} 
     ${shadowStyle(shadow)} 
     ${extend}`
