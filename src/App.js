@@ -4,10 +4,10 @@ import Navbar from './elements/Navbar'
 import About from './pages/About'
 
 const style = `
-  relative bg-gradient-to-b from-teal to-java 
-  min-h-screen overflow-hidden
-  font-body text-md text-gray-200
-  md:text-lg
+relative bg-gradient-to-b from-teal to-java 
+min-h-screen overflow-hidden
+font-body text-sm text-gray-200
+lg:text-base 
 `
 const Content = () => <About />
 

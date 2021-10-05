@@ -21,10 +21,12 @@ const style = ({
   shadow = true,
   extend = '',
   isCircular = false,
+  padding = 'px-3 py-2',
 }) => {
-  const base = `inline-block px-3 py-2`
+  const base = `inline-block`
   return `
     ${base} 
+    ${padding}
     ${roundStyle(isCircular)}
     ${bgColorStyle(color)} 
     ${shadowStyle(shadow)} 
