@@ -8,7 +8,7 @@ const menuContainer = `
 const pages = ['about', 'portfolio', 'contact', 'resume']
 
 // render
-const Navbar = ({ setCurrentPage }) => {
+const Navbar = ({ setCurrentPage, currentPage }) => {
   const handleClick = (e, page) => {
     e.preventDefault()
     if (setCurrentPage) {
@@ -21,6 +21,7 @@ const Navbar = ({ setCurrentPage }) => {
       <div className={menuContainer}>
         {pages.map((page) => (
           <NavItem
+            isCurrentPage={page === currentPage}
             text={page}
             onClick={(e) => handleClick(e, page)}
             key={page}
@@ -32,6 +33,7 @@ const Navbar = ({ setCurrentPage }) => {
 }
 
 Navbar.propTypes = {
+  currentPage: PropTypes.string,
   setCurrentPage: PropTypes.func,
 }
 export default Navbar

@@ -40,7 +40,7 @@ const App = () => {
     <div className={`${style}`}>
       <Wave />
       <Container extend="relative z-10 px-3 min-h-screen flex flex-col">
-        <Navbar setCurrentPage={setCurrentPage} />
+        <Navbar setCurrentPage={setCurrentPage} currentPage={currentPage} />
         <Content current={currentPage} />
         <Footer />
       </Container>
