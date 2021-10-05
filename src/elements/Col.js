@@ -6,8 +6,6 @@ const parseWidth = (width) => {
     segment.length === 1 ? `w-${segment}` : `${segment[0]}:w-${segment[1]}`,
   )
   const result = widths.join(' ')
-  console.log(segments)
-  console.log(result)
   return result
 }
 

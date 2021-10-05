@@ -1,8 +1,9 @@
 import Card from '../elements/Card'
 import Col from '../elements/Col'
+import Row from '../elements/Row'
 
 const About = () => (
-  <div className="flex flex-row flex-wrap pt-5">
+  <Row extend="pt-5">
     <Col width="full md-1/2">
       <Card color="brand" extend="p-4">
         Hello
@@ -13,7 +14,7 @@ const About = () => (
         Hello
       </Card>
     </Col>
-  </div>
+  </Row>
 )
 
 export default About
