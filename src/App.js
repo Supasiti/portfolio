@@ -14,7 +14,7 @@ const Content = () => <About />
 const App = () => (
   <div className={`${style}`}>
     <Wave />
-    <Container extend="relative z-10">
+    <Container extend="relative z-10 px-3">
       <Navbar />
       <Content />
     </Container>
