@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Wave from './elements/Wave'
+import Container from './elements/Container'
+import Navbar from './elements/Navbar'
+import About from './pages/About'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const style = `
+  relative bg-gradient-to-b from-teal to-java 
+  min-h-screen overflow-hidden
+  font-body text-md text-gray-200
+  md:text-lg
+`
+const Content = () => <About />
 
-export default App;
+const App = () => (
+  <div className={`${style}`}>
+    <Wave />
+    <Container extend="relative z-10">
+      <Navbar />
+      <Content />
+    </Container>
+  </div>
+)
+
+export default App

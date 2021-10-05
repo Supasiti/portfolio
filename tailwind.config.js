@@ -8,8 +8,12 @@ module.exports = {
         java: '#2a9d8f',
         gold: '#e9c46a',
         sandy: '#f4a261',
-        burnt: '#e76f51'
+        burnt: '#e76f51',
       },
+    },
+    fontFamily: {
+      title: ['Josefin Sans', 'sans-serif'],
+      body: ['Montserrat', 'sans-serif'],
     },
   },
   variants: {
