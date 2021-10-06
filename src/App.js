@@ -16,6 +16,7 @@ min-h-screen overflow-hidden
 font-body text-sm text-gray-200
 lg:text-base 
 `
+// page routing
 const Content = ({ current }) => {
   const pages = {
     about: <About />,
@@ -33,6 +34,7 @@ const Content = ({ current }) => {
   )
 }
 
+// render
 const App = () => {
   const [currentPage, setCurrentPage] = useState('about')
 

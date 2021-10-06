@@ -7,7 +7,7 @@ const Profile = () => (
   <div className="relative">
     <img
       className="mx-auto h-2/3 w-2/3 rounded-full item"
-      src="/images/me_400w.jpeg"
+      src="/assets/images/me_400w.jpeg"
       alt="My profile"
     />
 
