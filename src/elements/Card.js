@@ -21,7 +21,7 @@ const style = ({
   extend = '',
   isCircular = false,
 }) => {
-  const base = ` w-full h-full`
+  const base = `w-full h-full`
   return `
     ${base} 
     ${roundStyle(isCircular)}
