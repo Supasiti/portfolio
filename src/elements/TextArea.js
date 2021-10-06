@@ -1,4 +1,6 @@
 import { PropTypes } from 'prop-types'
+import { useRef } from 'react'
+import useClickOutside from '../hooks/useClickOutside'
 
 // styling
 const labelStyle = (idName) => {
@@ -17,12 +19,20 @@ const inputStyle = `w-full rounded-lg p-2 shadow-md
 // render
 const TextArea = ({
   onDataChange,
+  onClickOutside,
   name = 'text',
   placeholder = 'text',
   label = 'text',
   value = '',
   idName = 'text',
 }) => {
+  const inputRef = useRef(null)
+  const handleClickOutside = useClickOutside(inputRef, onClickOutside)
+
+  const handleOnFocus = () => {
+    document.addEventListener('mousedown', handleClickOutside)
+  }
+
   const handleOnChange = (e) => {
     if (onDataChange) {
       onDataChange(name, e.target.value)
@@ -35,7 +45,9 @@ const TextArea = ({
     className: inputStyle,
     placeholder,
     value,
+    ref: inputRef,
     onChange: handleOnChange,
+    onFocus: handleOnFocus,
   }
 
   return (
@@ -56,6 +68,7 @@ TextArea.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   onDataChange: PropTypes.func,
+  onClickOutside: PropTypes.func,
 }
 
 export default TextArea
