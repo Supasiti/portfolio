@@ -1,0 +1,25 @@
+{
+  "short_name": "My Portfolio",
+  "name": "Thara Supasiti's Portfolio",
+  "icons": [
+    {
+      "src": "SendLAB-100",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "SendLAB-192.png",
+      "type": "image/png",
+      "sizes": "192x202"
+    },
+    {
+      "src": "SendLAB-512.png",
+      "type": "image/png",
+      "sizes": "512x538"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
