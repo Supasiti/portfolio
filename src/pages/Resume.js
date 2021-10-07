@@ -11,7 +11,7 @@ const Resume = () => (
     <h2 className="w-full text-4xl text-center text-sandy mb-4">Skills</h2>
 
     {badgeData.map((badge) => (
-      <Col width="full sm-1/3" key={badge.title}>
+      <Col width="w-full sm:w-1/3" key={badge.title}>
         <Badge {...badge} />
       </Col>
     ))}
