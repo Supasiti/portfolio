@@ -23,7 +23,7 @@ const ProjectCard = ({ project = {} }) => {
   const [reveal, setReveal] = useState(false)
 
   return (
-    <Col width="72" extend="relative p-3">
+    <Col width="w-72" extend="relative p-3">
       <div
         className={`relative ${reveal ? 'z-30' : 'z-0'}`}
         onMouseEnter={() => setReveal(true)}

@@ -5,10 +5,10 @@ import Profile from '../components/Profile'
 
 const About = () => (
   <Row extend="py-8 md:py-12 items-start">
-    <Col width="full md-1/2" extend="px-4 py-0">
+    <Col width="w-full md:w-1/2" extend="px-4 py-0">
       <Profile />
     </Col>
-    <Col width="full md-1/2" extend="px-4 py-0">
+    <Col width="w-full md:w-1/2" extend="px-4 py-0">
       <AboutMe />
     </Col>
   </Row>
