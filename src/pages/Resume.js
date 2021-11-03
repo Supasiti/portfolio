@@ -17,7 +17,7 @@ const Resume = () => (
     ))}
 
     <AbsoluteDiv position="top-28 right-4" extend="z-10">
-      <a href="./assets/files/CV-2021-09-04.pdf">
+      <a href="./assets/files/CV-Tharatorn-Supasiti.pdf">
         <Button color="gold" extend="w-16 h-16">
           <i className="far fa-file-alt text-2xl"></i>
         </Button>

@@ -15,6 +15,7 @@ const Navbar = ({ setCurrentPage, currentPage }) => {
       setCurrentPage(page)
     }
   }
+
   return (
     <div className="flex flex-row justify-between py-5">
       <h3 className="hidden md:inline-block">Tharatorn Supasiti</h3>

@@ -8,7 +8,7 @@ const badgeData = [
     icon: <i className="fab fa-js-square fa-2x"></i>,
     title: 'JavaScript',
     text: `HTML5, CSS, tailwindcss, ReactJS,
-    Node.js, Jest, Express.js,   
+    GraphQL, Node.js, Jest, Express.js,   
     Sequelize, Mongoose`,
   },
   {

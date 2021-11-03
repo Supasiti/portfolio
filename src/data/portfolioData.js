@@ -1,5 +1,20 @@
 export const portfolioData = [
   {
+    title: 'Lend It Forward',
+    imgData: {
+      source: [
+        './assets/images/lend-it-forward-400w.png',
+        './assets/images/lend-it-forward-800w.png',
+      ],
+      alt: 'screenshot of Lend It Forward',
+    },
+    tags: ['React', 'GraphQL', 'NodeJS', 'MongoDB'],
+    link: 'https://lend-it-forward.herokuapp.com/',
+    codeLink: 'https://github.com/Supasiti/lend-it-forward',
+    description:
+      'A web application that allows lenders to curate their own personal libraries of items that others can borrow.',
+  },
+  {
     title: 'BeeStrong',
     imgData: {
       source: [
